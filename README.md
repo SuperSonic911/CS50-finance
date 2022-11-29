@@ -1,9 +1,9 @@
-# CS50-finance
+# CS50-Finance
 ### Full stack web application for stock exchange
 
 To use this app you must first obtain an API key from iexcloud
 
-Visit URL: iexcloud.io/cloud-login#/register/
+Visit URL: https://iexcloud.io/cloud-login#/register/
 
 Select the “Individual” account type, then enter your name, email address, and a password, and click “Create account”.
 
