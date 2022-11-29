@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+        <th scope="col">Time</th>
+        <th scope="col">Symbol</th>
+        <th scope="col">Shares</th>
+        <th scope="col">Price</th>
+        <th scope="col">Total Price</th>
+      </tr>
+    </thead>
+    <tbody>
+        <!--Loop through all rows to display details-->
+        {% for row in history %}
+      <tr>
+        <td>{{ row["type"] }}</td>
+        <td>{{ row["time"] }}</td>
+        <td>{{ row["symbol"] }}</td>
+        <td>{{ row["shares"] }}</td>
+        <td>{{ row["price"] }}</td>
+        <td>{{ row["totalprice"] }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

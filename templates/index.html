@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Your Portfolio
+{% endblock %}
+
+{% block main %}
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Symbol</th>
+        <th scope="col">Shares</th>
+        <th scope="col">Updated Price</th>
+        <th scope="col">Total Price</th>
+      </tr>
+    </thead>
+    <tbody>
+        <!--Loop through all rows to display details-->
+        {% for row in allstocks %}
+      <tr>
+        <td>{{ row["symbol"] }}</td>
+        <td>{{ row["shares"] }}</td>
+        <td>{{ row["lookup(row["symbol"])["price"]"] }}</td>
+        <td>{{ row["totalprice"] }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+</table>
+<div>
+<p>Cash: {{ cash }}</p>
+<br>
+<p>Total price for all stocks: {{ totalstocksprice }}</p>
+</div>
+{% endblock %}
