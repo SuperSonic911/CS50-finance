@@ -1,4 +1,5 @@
 # CS50-Finance
+![finance](finance.jpg "finance")
 ### Full stack web application for stock exchange
 
 To use this app you must first obtain an API key from iexcloud
